@@ -21,6 +21,11 @@ def binarySearchTree(data, objek):
             print(f"Data[{c}] : {data[c]}")
             i = "0"         # Stop Pencarian
         
+        # Data Tidak Ditemukan
+        elif c == n or n < 0 or s > len(data)-2:
+            print("Data Tidak Ditemukan!")
+            i = "0"
+
         # Data Lebih Besar Dari Objek
         elif data[c] > objek:
             n = c-1
@@ -29,13 +34,10 @@ def binarySearchTree(data, objek):
         elif data[c] < objek:
             s = c+1
 
-
 # Client Side
 
 data = [2, 3, 5, 6, 8, 11, 12, 17, 20, 25]      # Data Terurut
-objek = 6       # Objek Pencarian
+objek = 26       # Objek Pencarian
 
 # Lakukan Pencarian
 binarySearchTree(data, objek)
-
-     
